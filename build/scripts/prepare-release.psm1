@@ -1,24 +1,24 @@
-$gitHubBotUserName="github-actions[bot]"
-$gitHubBotEmail="41898282+github-actions[bot]@users.noreply.github.com"
-
-$repoViewResponse = gh repo view --json nameWithOwner | ConvertFrom-Json
-
-$gitRepository = $repoViewResponse.nameWithOwner
-
 function CreatePullRequestToUpdateChangelogsAndPublicApis {
   param(
+    [Parameter(Mandatory=$true)][string]$gitRepository,
     [Parameter(Mandatory=$true)][string]$minVerTagPrefix,
     [Parameter(Mandatory=$true)][string]$version,
-    [Parameter()][string]$gitUserName=$gitHubBotUserName,
-    [Parameter()][string]$gitUserEmail=$gitHubBotEmail,
-    [Parameter()][string]$targetBranch="main"
+    [Parameter()][string]$targetBranch="main",
+    [Parameter()][string]$gitUserName,
+    [Parameter()][string]$gitUserEmail
   )
 
   $tag="${minVerTagPrefix}${version}"
   $branch="release/prepare-${tag}-release"
 
-  git config user.name $gitUserName
-  git config user.email $gitUserEmail
+  if ([string]::IsNullOrEmpty($gitUserName) -eq $false)
+  {
+    git config user.name $gitUserName
+  }
+  if ([string]::IsNullOrEmpty($gitUserEmail) -eq $false)
+  {
+    git config user.email $gitUserEmail
+  }
 
   git switch --create $branch 2>&1 | % ToString
   if ($LASTEXITCODE -gt 0)
@@ -70,13 +70,9 @@ Export-ModuleMember -Function CreatePullRequestToUpdateChangelogsAndPublicApis
 
 function LockPullRequestAndPostNoticeToCreateReleaseTag {
   param(
-    [Parameter(Mandatory=$true)][string]$pullRequestNumber,
-    [Parameter()][string]$gitUserName=$gitHubBotUserName,
-    [Parameter()][string]$gitUserEmail=$gitHubBotEmail
+    [Parameter(Mandatory=$true)][string]$gitRepository,
+    [Parameter(Mandatory=$true)][string]$pullRequestNumber
   )
-
-  git config user.name $gitUserName
-  git config user.email $gitUserEmail
 
   $prViewResponse = gh pr view $pullRequestNumber --json mergeCommit,author,title | ConvertFrom-Json
 
@@ -115,15 +111,11 @@ Export-ModuleMember -Function LockPullRequestAndPostNoticeToCreateReleaseTag
 
 function CreateReleaseTag {
   param(
+    [Parameter(Mandatory=$true)][string]$gitRepository,
     [Parameter(Mandatory=$true)][string]$pullRequestNumber,
     [Parameter(Mandatory=$true)][string]$actionRunId,
-    [Parameter()][string]$gitUserName=$gitHubBotUserName,
-    [Parameter()][string]$gitUserEmail=$gitHubBotEmail,
     [Parameter()][ref]$tag
   )
-
-  git config user.name $gitUserName
-  git config user.email $gitUserEmail
 
   $prViewResponse = gh pr view $pullRequestNumber --json mergeCommit,author,title | ConvertFrom-Json
 
@@ -176,6 +168,7 @@ Export-ModuleMember -Function CreateReleaseTag
 
 function PostPackagesReadyNotice {
   param(
+    [Parameter(Mandatory=$true)][string]$gitRepository,
     [Parameter(Mandatory=$true)][string]$pullRequestNumber,
     [Parameter(Mandatory=$true)][string]$tag,
     [Parameter(Mandatory=$true)][string]$packagesUrl
