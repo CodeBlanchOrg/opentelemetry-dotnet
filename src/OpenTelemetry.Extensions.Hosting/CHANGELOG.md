@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.9.0-beta.1
+
+Released 2024-May-30
+
 ## 1.9.0-alpha.1
 
 Released 2024-May-20
