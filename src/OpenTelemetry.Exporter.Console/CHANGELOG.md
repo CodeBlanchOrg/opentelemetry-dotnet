@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.9.0-beta.1
+
+Released 2024-Jun-06
+
 * The experimental APIs previously covered by `OTEL1000`
   (`LoggerProviderBuilder.AddConsoleExporter` extension) will now be part of the
   public API and supported in stable builds.
