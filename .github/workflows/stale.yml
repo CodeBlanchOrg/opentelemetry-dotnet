@@ -7,7 +7,7 @@ on:
     - cron: "12 3 * * *"  # arbitrary time not to DDOS GitHub
 
 jobs:
-  stale: # test
+  stale:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v9
