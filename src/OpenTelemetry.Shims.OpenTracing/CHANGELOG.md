@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated OpenTelemetry core component version(s) to `1.10.0`.
+  ([#51](https://github.com/CodeBlanchOrg/opentelemetry-dotnet/pull/51))
+
 ## 1.9.0-beta.1
 
 Released 2024-Jun-14
@@ -30,6 +33,7 @@ Released 2023-Sep-05
 * Fix: Do not raise `ArgumentException` if `Activity` behind the shim span
   has an invalid context.
   ([#2787](https://github.com/open-telemetry/opentelemetry-dotnet/issues/2787))
+
 * Obsolete `TracerShim(Tracer, TextMapPropagator)` constructor.
   Provide `TracerShim(TracerProvider)`
   and `TracerShim(TracerProvider, TextMapPropagator)` constructors.
