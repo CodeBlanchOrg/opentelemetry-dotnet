@@ -4,7 +4,7 @@
 
 ## 1.10.0-alpha.1
 
-Released 2024-Jun-18
+Released 2024-Jun-22
 
 ## 1.9.0
 
