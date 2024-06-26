@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.10.0
+
+Released 2024-Jun-26
+
 * **Breaking change**: Non-primitive attribute (logs) and tag (traces) values
   converted using `Convert.ToString` will now format using
   `CultureInfo.InvariantCulture`.
