@@ -6,11 +6,7 @@ directory of each individual package.
 
 ## 1.12.0
 
-* Added some new features.
-* Did some cool things...
-  * Cool thing 1
-  * Cool thing 2
-  * Cool thing 3
+* Nothing in this release
 
 ## 1.11.0
 
