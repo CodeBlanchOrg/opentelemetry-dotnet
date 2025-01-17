@@ -4,6 +4,14 @@ This file contains highlights and announcements covering all components.
 For more details see `CHANGELOG.md` files maintained in the root source
 directory of each individual package.
 
+## 1.12.0
+
+* Added some new features.
+* Did some cool things...
+  * Cool thing 1
+  * Cool thing 2
+  * Cool thing 3
+
 ## 1.11.0
 
 * `OpenTelemetry.Exporter.OpenTelemetryProtocol` no longer depends on the
