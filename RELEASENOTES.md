@@ -9,7 +9,8 @@ directory of each individual package.
 * Added some new features.
 * Did some cool things..
   * Cool thing 1
-  * Cool thing 2
+  * Cool thing 2 
+  * Cool thing 3
 
 ## 1.11.0
 
@@ -109,4 +110,5 @@ directory of each individual package.
   See [reclaim unused metric
   points](https://github.com/open-telemetry/opentelemetry-dotnet/blob/32c64d04defb5c92d056fd8817638151168b10da/docs/metrics/README.md#cardinality-limits)
   for more details.
+
 
