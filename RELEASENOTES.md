@@ -6,10 +6,7 @@ directory of each individual package.
 
 ## 1.11.0
 
-* `OpenTelemetry.Exporter.OpenTelemetryProtocol` no longer depends on the
-  `Google.Protobuf`, `Grpc`, or `Grpc.Net.Client` packages. Serialization and
-  transmission of outgoing data is now performed manually to improve the overall
-  performance.
+* Replace 1.11.0 content
 
 ## 1.10.0
 
