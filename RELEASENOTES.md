@@ -10,6 +10,7 @@ directory of each individual package.
 * More changes:
   * Item 1
   * Item 2
+  * Item 3
 
 ## 1.11.0
 
