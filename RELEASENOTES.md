@@ -4,6 +4,13 @@ This file contains highlights and announcements covering all components.
 For more details see `CHANGELOG.md` files maintained in the root source
 directory of each individual package.
 
+## 1.12.0
+
+* Added some new features.
+* Did some cool things..
+  * Cool thing 1
+  * Cool thing 2
+
 ## 1.11.0
 
 * `OpenTelemetry.Exporter.OpenTelemetryProtocol` no longer depends on the
@@ -102,3 +109,4 @@ directory of each individual package.
   See [reclaim unused metric
   points](https://github.com/open-telemetry/opentelemetry-dotnet/blob/32c64d04defb5c92d056fd8817638151168b10da/docs/metrics/README.md#cardinality-limits)
   for more details.
+
