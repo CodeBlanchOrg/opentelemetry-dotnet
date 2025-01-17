@@ -6,6 +6,10 @@ covering all components see: [Release Notes](../../RELEASENOTES.md).
 
 ## Unreleased
 
+## 1.12.0
+
+Released 2025-Jan-17
+
 ## 1.11.0
 
 Released 2025-Jan-15
