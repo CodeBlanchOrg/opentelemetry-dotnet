@@ -8,6 +8,10 @@ Notes](../../RELEASENOTES.md).
 
 ## 1.11.0
 
+Released 2025-Jan-17
+
+## 1.11.0
+
 Released 2025-Jan-15
 
 * [Meter.Tags](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.metrics.meter.tags?view=net-9.0)
