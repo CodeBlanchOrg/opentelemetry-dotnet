@@ -4,6 +4,12 @@ This file contains highlights and announcements covering all components.
 For more details see `CHANGELOG.md` files maintained in the root source
 directory of each individual package.
 
+## 1.12.0
+
+Release details: [1.12.0](https://github.com/CodeBlanchOrg/opentelemetry-dotnet/releases/tag/core-1.12.0)
+
+* Testing
+
 ## 1.11.1
 
 * Fixed a bug preventing `OpenTelemetry.Exporter.OpenTelemetryProtocol` from
