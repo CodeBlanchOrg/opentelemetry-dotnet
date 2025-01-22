@@ -9,6 +9,7 @@ directory of each individual package.
 Release details: [1.12.0](https://github.com/CodeBlanchOrg/opentelemetry-dotnet/releases/tag/core-1.12.0)
 
 * Testing
+* Testing 2
 
 ## 1.11.1
 
